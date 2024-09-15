@@ -8,4 +8,5 @@ dependencies = [
     "fastapi>=0.114.2",
     "strawberry-graphql[fastapi]>=0.240.4",
     "ultralytics>=8.2.93",
+    "uvicorn>=0.30.6",
 ]
