@@ -11,3 +11,35 @@
 ### Activate environment
 > `uv sync` then `source .venv/bin/activate`
 
+## Run Project
+> `uv run uvicorn main:app --reload`
+
+## Containerization
+### Build
+> `docker build -t <image>:<version> .`
+
+### Run image
+> `docker run -d --name <container-name> -p <port>:<port> <image-name>`
+
+## Example input on Playground (Altair/GraphiQL/Apollo)
+### Mutation
+```graphql
+mutation($file: Upload!) {
+  detectObjects(file: $file) {
+    className
+    confidence
+    bbox
+  }
+}
+```
+
+### Query
+```graphql
+{
+  detectObjects(imagePath: "image.jpg") {
+    className
+    confidence
+    bbox
+  }
+}
+```
