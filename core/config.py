@@ -1,2 +1,2 @@
 class Config:
-    MODEL_PATH = "../yolov8n.pt"
+    MODEL_PATH = "../yolov8l.pt"

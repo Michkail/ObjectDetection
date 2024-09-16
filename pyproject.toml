@@ -5,6 +5,7 @@ description = "This is a sample product or projecrt for Object Detection"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
+    "aiofiles>=24.1.0",
     "fastapi>=0.114.2",
     "strawberry-graphql[fastapi]>=0.240.4",
     "ultralytics>=8.2.93",
