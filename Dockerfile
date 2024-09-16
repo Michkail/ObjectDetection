@@ -2,8 +2,11 @@ FROM ghcr.io/astral-sh/uv:python3.9-bookworm-slim
 
 WORKDIR /app
 
-ENV UV_COMPILE_BYTECODE=1
+RUN apt-get update && apt-get install -y \
+    libgl1-mesa-glx \
+    && rm -rf /var/lib/apt/lists/*
 
+ENV UV_COMPILE_BYTECODE=1
 ENV UV_LINK_MODE=copy
 
 RUN --mount=type=cache,target=/root/.cache/uv \
